@@ -84,7 +84,6 @@ function editCategory($id, $informations)
     $db = dbConnect();
 
     $query = $db->prepare('UPDATE categorys SET name = ?, description = ? WHERE id = ?');
-
     $result = $query->execute(
         [
             $informations['name'],
@@ -94,7 +93,6 @@ function editCategory($id, $informations)
     );
 
     if($result && isset($_FILES['image']['tmp_name'])){
-        delImage($id);
         $allowed_extensions = array( 'jpg' , 'jpeg' , 'gif', 'png' );
         $my_file_extension = pathinfo( $_FILES['image']['name'] , PATHINFO_EXTENSION);
         if (in_array($my_file_extension , $allowed_extensions)){

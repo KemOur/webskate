@@ -9,22 +9,36 @@
     </div>
 <?php endif; ?>
 
-<a class="" href="http://localhost/webskate/administrateur/index.php?controller=users&action=new">Ajouter un utilisateur</a><br>
+<div>
+<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=users&action=new">Ajouter un utilisateur</a>
+</div>
 <br>
-<ul class="list-group">
+<h4>Liste des utilisateurs:</h4>
+
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
     <?php foreach($users as $user): ?>
-        <div class="">
-            <li class="list-group-item">
-                <p><?=  htmlspecialchars($user['nom']) ?></p>
-                <p><?=  htmlspecialchars($user['prenom']) ?>
-                <p><?=  htmlspecialchars($user['email']) ?>
-                </p>
+    <tbody>
+    <tr>
+                <th><?=  htmlspecialchars($user['nom']) ?></th>
+                <td><?=  htmlspecialchars($user['prenom']) ?></td>
+                <td><?=  htmlspecialchars($user['email']) ?></td>
 
-                <a class="float-right" href="index.php?controller=users&action=delUser&id=<?= $user['id'] ?>"> supprimer</a>
-                <a class="float-right" href="index.php?controller=users&action=editUser&id=<?= $user['id'] ?>">modifier <br></a>
-            </li>
-        </div>
+        <td>
+            <a class="btn btn-outline-info" href="index.php?controller=users&action=editUser&id=<?= $user['id'] ?>">modifier <br></a>
+            <a class="btn btn-outline-danger" href="index.php?controller=users&action=delUser&id=<?= $user['id'] ?>"> supprimer</a>
+        </td>
+
+        <tr>
+    </tbody>
     <?php endforeach; ?>
-</ul>
+</table>
 
-<?php require ('partials/footer.php'); ?>
+    <?php require ('partials/footer.php'); ?>

@@ -12,23 +12,40 @@
 
 
 
-<a class="" href="http://localhost/webskate/administrateur/index.php?controller=products&action=new">Ajouter un produit</a><br>
-<ul class="list-group">
+<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=products&action=new">Ajouter un produit</a>
+<br>
+<br>
+<h4>Liste des produits:</h4>
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+
     <?php foreach($products as $product): ?>
-        <img src="../assets/images/product/<?= ($product['image']) ?>" alt="images" width="150px" height="200px">
 
-        <li class="list-group-item"><h4><?=  htmlspecialchars($product['name']) ?></h4>
-            Description:<?=  htmlspecialchars($product['description']) ?>
-            <!--<br>Prix:<?=  htmlspecialchars($product['price']) ?>€-->
-            <br>
-                Catégorie:<?php $category = getCategory($product['category_id']);echo $category['name'] ?>
-            <br>
-            <a class="float-right" href="index.php?controller=products&action=delProduct&id=<?= $product['id'] ?>"> supprimer</a>
-            <a class="float-right" href="index.php?controller=products&action=editProduct&id=<?= $product['id'] ?>">modifier</a>
-        </li>
+    <tbody>
+            <tr>
+            <th><img src="../assets/images/product/<?= ($product['image']) ?>" alt="images" width="100px" height="100px"></th>
+
+                <td> <h4><?=  htmlspecialchars($product['name']) ?></h4></td>
+                <td><?=  htmlspecialchars($product['description']) ?></td>
+                <td><?=  htmlspecialchars($product['price']) ?>€</td>
+                <td><?php $category = getCategory($product['category_id']);echo $category['name'] ?></td>
+
+                <td>
+                    <a class="btn btn-outline-info" href="index.php?controller=products&action=editProduct&id=<?= $product['id'] ?>">modifier</a>
+                    <a class="btn btn-outline-danger" href="index.php?controller=products&action=delProduct&id=<?= $product['id'] ?>"> supprimer</a>
+                </td>
+            </tr>
+    </tbody>
+
     <?php endforeach; ?>
-</ul>
-
-
-
+</table>
 <?php require ('partials/footer.php'); ?>

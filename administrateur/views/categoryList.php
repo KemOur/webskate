@@ -9,19 +9,37 @@
     </div>
 <?php endif; ?>
 
-<a class="" href="http://localhost/webskate/administrateur/index.php?controller=categorys&action=new">Nouvelle Catégorie</a><br>
 
-<ul class="list-group">
+<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=categorys&action=new">Ajouter Catégorie</a><br>
+<br>
+<h4>Liste des Catégories:</h4>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Nom de la catégorie</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+        </tr>
+    </thead>
+
     <?php foreach($categorys as $category): ?>
-    <div class="category">
-        <img src="../assets/images/category/<?= ($category['image']) ?>" alt="image_categorie">
-        <li class="list-group-item"><p><?=  htmlspecialchars($category['name']) ?></p><p><?=  htmlspecialchars($category['description']) ?>
-            </p>
-                <a class="float-right" href="index.php?controller=categorys&action=delCategory&id=<?= $category['id'] ?>"> supprimer</a>
-                <a class="float-right" href="index.php?controller=categorys&action=editCategory&id=<?= $category['id'] ?>">modifier <br></a></p>
-        </li>
-    </div>
+    <tbody>
+            <tr>
+                <th><img src="../assets/images/category/<?= ($category['image']) ?>" width="100px" height="100px" alt="image_categorie"></th>
+                <td><p><?=  htmlspecialchars($category['name']) ?></td>
+                <td><p><?=  htmlspecialchars($category['description']) ?></p></td>
+
+                <td>
+                    <a class="btn btn-outline-info" href="index.php?controller=categorys&action=editCategory&id=<?= $category['id'] ?>">modifier<br></a>
+                    <a class="btn btn-outline-danger" href="index.php?controller=categorys&action=delCategory&id=<?= $category['id'] ?>" >supprimer</a>
+                </td>
+
+            </tr>
+    </tbody>
     <?php endforeach; ?>
-</ul>
+
+</table>
+
 
 <?php require ('partials/footer.php'); ?>

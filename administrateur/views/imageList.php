@@ -9,6 +9,7 @@
     </div>
 <?php endif; ?>
 
+<h4>Liste des images:</h4>
 
 <ul class="list-group">
     <?php foreach($images as $image): ?>

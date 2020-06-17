@@ -7,11 +7,8 @@ require('models/Image.php');
 
 if($_GET['action'] == 'list'){
     $products = getAllProducts();
-
     require('views/productList.php');
 }
-
-
 
 
 
@@ -19,8 +16,6 @@ elseif($_GET['action'] == 'new'){
     $categorys=getAllCategorys();
     require('views/productFORM.php');
 }
-
-
 
 
 
@@ -72,14 +67,11 @@ elseif($_GET['action'] == 'addProduct'){
 elseif($_GET['action'] == 'editProduct'){
     //si le formulaire est soumis
     if(!empty($_POST)){
-        if(empty($_POST['name'])
-            || empty($_POST['description'])
-            || empty($_POST['price'])
-            || empty($_POST['quantity'])
-            || empty($_POST['category_id'])){
+        if(empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['quantity']) || empty($_POST['category_id'])){
         //verif champs obligaroires
 
-            $result = editProduct($_GET['id'], $_POST);
+            //exit ajouté aujour hui (14/06/20)
+            //$result = editProduct($_GET['id'], $_POST);
             if(empty($_POST['name'])){
                 $_SESSION['messages'][] = 'Le nom est obligatoire !';
             }
@@ -92,14 +84,12 @@ elseif($_GET['action'] == 'editProduct'){
             if(empty($_POST['quantity'])){
                 $_SESSION['messages'][] = 'Champs obligatoire !';
             }
-
             if(empty($_POST['category_id'])){
                 $_SESSION['messages'][] = 'Selectionnez une catégorie!';
             }
-
                 $_SESSION['old_inputs'] = $_POST;
                 header('Location:index.php?controller=products&action=editProduct&id='.$_GET['id']);
-
+exit;//exit ajouté aujour hui (14/06/20)
         }
 
         else{
@@ -126,7 +116,6 @@ elseif($_GET['action'] == 'editProduct'){
             require('views/productForm.php');
     }
 }
-
 
 
 

@@ -11,7 +11,7 @@
     <br>
 
     <form action="index.php?controller=images&action=<?= isset($image) ||
-    (isset($_SESSION['old_inputs']) && $_GET['action'] == 'new') ? 'editImage&id='.$_GET['id'] : 'addImage' ?>" method="post" enctype="multipart/form-data">
+    (isset($_SESSION['old_inputs']) && $_GET['action'] == 'edit_Product_Image') ? 'editImage&id='.$_GET['id'] : 'addImage' ?>" method="post" enctype="multipart/form-data">
 
         <label for="name">Legende :</label>
         <input  type="text" name="name" id="name"value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($image) ? $image['name'] : '' ?>" />

@@ -2,6 +2,12 @@
 <?php
 
 session_start();
+var_dump($_SESSION);
+
+if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] == 0){
+    header('Location: http://localhost/webskate/index.php?controller=home&action=home');
+    exit;
+}
 
 // ne pas oublier de vérifier si l'utilisateur est connecté et qu'il est admin
 //sinon le renvoyer vers la page d'accueil du site

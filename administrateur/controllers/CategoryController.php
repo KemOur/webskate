@@ -83,9 +83,9 @@ elseif($_GET['action'] == 'editCategory'){
     else{
         if (!isset($_SESSION['old_inputs'])){
             $category = getCategory($_GET['id']);
-
         }
         $categorys = getAllCategorys();
+
         require('views/categoryForm.php');
     }
 }

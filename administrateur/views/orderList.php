@@ -1,17 +1,27 @@
 <?php require ('partials/header.php'); ?>
 
+<br>
+<h4>Liste des commandes:</h4>
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Adress</th>
 
+    </tr>
+    </thead>
 
-<ul class="list-group">
     <?php foreach($orders as $order): ?>
-        <div class="category">
-            <li class="list-group-item">
-                <a href=""><?=  htmlspecialchars($order['client_name']) ?></a>
+    <tbody>
+    <tr>
+
+        <th><a href=""><?=  htmlspecialchars($order['client_name']) ?></a></th>
                 <!-- prénom link que devra me redigerer vers la page détail commande! || PAS ENCORE FAIT!!!!-->
-                <p><?=  htmlspecialchars($order['delivery_adress'])?></p>
-            </li>
-        </div>
+                <td><?=  htmlspecialchars($order['delivery_adress'])?></td>
+
+    <tr>
+    </tbody>
     <?php endforeach; ?>
-</ul>
+</table>
 
 <?php require ('partials/footer.php'); ?>

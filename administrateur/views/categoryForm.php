@@ -15,19 +15,28 @@
 <br>
 
     <form action="index.php?controller=categorys&action=<?= isset($category) ||
-    (isset($_SESSION['old_inputs']) && $_GET['action'] == 'new') ? 'editCategory&id='.$_GET['id'] : 'addCategory' ?>" method="post" enctype="multipart/form-data">
-        <label for="name">Entrez le nom de la nouvelle catégorie :</label>
-        <input  type="text" name="name" id="name" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($category) ? $category['name'] : '' ?>" />
+    (isset($_SESSION['old_inputs']) && $_GET['action'] == 'editCategory')  ? 'editCategory&id='.$_GET['id'] : 'addCategory' ?>" method="post" enctype="multipart/form-data">
 
         <br>
+        <div class="input-group">
+            <div class="input-group-prepend"><span class="input-group-text">Catégorie</span></div>
+            <input  type="text" name="name" class="form-control" id="name" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($category) ? $category['name'] : '' ?>" />
+        </div>
         <br>
-        <label for="description">Décrivez votre nouvelle catégorie :</label>
-        <textarea name="description" id="description"><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['description'] : '' ?><?= isset($category) ? $category['description'] : '' ?></textarea><br>
+
+
+        <div class="input-group">
+            <div class="input-group-prepend"><span class="input-group-text">Décrivez votre nouvelle catégorie</span></div>
+        <textarea name="description" class="form-control" id="description"><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['description'] : '' ?><?= isset($category) ? $category['description'] : '' ?></textarea><br>
+        </div>
         <br>
-        <label for="image">Télechargez une image :</label>
-        <input type="file" name="image" id="image" /><br>
+
+        <div class="input-group">
+            <div class="input-group-prepend"><span class="input-group-text">Télechargez une image</span></div>
+        <input type="file" name="image" id="image" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['image'] : '' ?><?= isset($category) ? $category['image'] : '' ?>"  />
+        </div>
         <br>
-        <input type="submit" value="Enregistrer" />
+        <input class="btn btn-outline-info" type="submit" value="Enregistrer" />
 
     </form>
 
