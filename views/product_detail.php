@@ -15,10 +15,10 @@
                     <a href="">
                         <div class="product">
                             <div><img class="imgdetail" src="assets/images/product/<?= ($selectedProduct['image']) ?>" alt="images" height="550px"></div>
-                            <div class="productdetail">
-                            <h1><?= $selectedProduct['name']; ?></h1>
-                            <h4>DESCRIPTION DU PRODUIT</h4>
-                            <?= $selectedProduct['description']; ?>
+                                <div class="productdetail">
+                                <h1><?= $selectedProduct['name']; ?></h1>
+                                <h4>DESCRIPTION DU PRODUIT</h4>
+                                <?= $selectedProduct['description']; ?>
                             <h3><?= $selectedProduct['price']; ?> €</h3>
                             </div>
                         </div>

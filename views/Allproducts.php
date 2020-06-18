@@ -42,7 +42,4 @@
             </a>
         </div>
     </div>
-
-    <div class="sp">
-    </div>
 <?php require ('partials/footer.php'); ?>

@@ -1,22 +1,16 @@
-<div class="sp">
-    <div>
-        <div class=""><img>Nous Contacter</img></div>
-        <div class=""><img> Paiment Sécurisé</img></div>
-        <div class=""><img> Remboursements</img></div>
-    </div>
-    <div>
-        <h3>Suivez-nous</h3>
-        <img>facebook</img>
-        <img>twitter</img>
-        <img>Instagram</img>
-    </div>
 </div>
 
-<div class="footer">
-  <h3>Mentions légales <a class="lieninscription" href="#">Lire</a>.</h3>
-</div>
-</div>
+<div class="footer"><div>
+        <img src="assets/images/autres/en.png" alt="images" height="100px" width="100px">
+        <img src="assets/images/autres/ps.png" alt="images" height="150px" width="200px">
+        <img src="assets/images/autres/rb.png" alt="images" height="200px" width="200px">
+            <hr class="hrf">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Mentions Légales <a class="lieninscription" href="#">Lire</a>.</h3>
+    </div></div>
 <script src="assets/js/javascript.js"></script>
-</div>
 </body>
 </html>

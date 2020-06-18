@@ -22,5 +22,6 @@
         <p>Vous avez pas un compte? <a class="lieninscription" href="http://localhost/webskate/index.php?page=register&action=register">Inscrivez-vous</a>.</p>
     </div>
 </form>
-
+<br>
+<br>
 <?php require ('partials/footer.php'); ?>
