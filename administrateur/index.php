@@ -5,7 +5,7 @@ session_start();
 var_dump($_SESSION);
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] == 0){
-    header('Location: http://localhost/webskate/index.php?controller=home&action=home');
+    header('Location: http://localhost/webskate/index.php?page=home&action=home');
     exit;
 }
 

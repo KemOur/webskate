@@ -1,9 +1,13 @@
 <?php
 require('models/Login.php');
+require_once 'models/ShowCategoryModel.php';
+
 
 //My function to add a new User
 if($_GET['action'] == 'login'){
+    $categorys = getCategorys();
     require('views/login.php');
+
 }
 
 elseif($_GET['action'] == 'coUser'){
@@ -28,12 +32,12 @@ elseif($_GET['action'] == 'coUser'){
         if($resultAdd){
             $_SESSION['messages'][] = ' Connecté !';
 
-            header('Location:index.php?controller=home&action=home');
+            header('Location:index.php');
             exit;;
         }else{
             $_SESSION['messages'][] = "Mot de passe ou adresse email incorrect! :(";
 
-            header('Location:index.php?controller=login&action=login');
+            header('Location:index.php?page=login&action=login');
             exit;
         }
 

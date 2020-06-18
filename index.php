@@ -6,19 +6,25 @@ session_start();
 var_dump($_SESSION);
 require ('helpers.php');
 
+if(isset($_GET['action'])){
+    if($_GET['action'] == 'logout'){
+        //destroy the session
+        session_destroy();
+        //unset($_SESSION['user']);
+        //redirect the user to a default web page using header
+        header("Location:index.php?page=products&action=all");
+    }
+}
 
 
-if(isset($_GET['controller'])):
-    switch ($_GET['controller']):
-        case 'home' :
-            require 'controllers/HomeController.php';
-            break;
+if(isset($_GET['page'])):
+    switch ($_GET['page']):
 
-        case 'login' :
+            case 'login' :
             require 'controllers/LoginController.php';
             break;
 
-        case 'register' :
+            case 'register' :
             require 'controllers/RegisterController.php';
             break;
 
@@ -26,6 +32,9 @@ if(isset($_GET['controller'])):
             require 'controllers/ProductsController.php';
             break;
 
+            case 'product' :
+            require 'controllers/ProductController.php';
+            break;
         default :
             require 'controllers/indexController.php';
     endswitch;
@@ -34,12 +43,3 @@ else:
 endif;
 
 
-if(isset($_GET['action'])){
-    if($_GET['action'] == 'logout'){
-        //destroy the session
-        session_destroy();
-        //unset($_SESSION['user']);
-        //redirect the user to a default web page using header
-        header("Location:index.php?controller=home&action=home");
-    }
-}

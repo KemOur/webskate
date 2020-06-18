@@ -1,6 +1,6 @@
 <?php require ('partials/header.php'); ?>
 
-<form action="index.php?controller=login&action=coUser" method="post">
+<form action="index.php?page=login&action=coUser" method="post">
     <div class="container">
         <h1>Se connecter</h1>
         <hr>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="container signin">
-        <p>Vous avez pas un compte? <a href="http://localhost/webskate/index.php?controller=register&action=register">Inscrivez-vous</a>.</p>
+        <p>Vous avez pas un compte? <a class="lieninscription" href="http://localhost/webskate/index.php?page=register&action=register">Inscrivez-vous</a>.</p>
     </div>
 </form>
 

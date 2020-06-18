@@ -1,10 +1,13 @@
 <?php
 require('models/Register.php');
+require_once 'models/ShowCategoryModel.php';
 
 //My function to add a new User
 if($_GET['action'] == 'register'){
-    require('views/registerForm.php');
     $users = getAllUsers();
+    $categorys = getCategorys();
+    require('views/registerForm.php');
+
 }
 
 elseif($_GET['action'] == 'addUser'){
@@ -32,11 +35,11 @@ elseif($_GET['action'] == 'addUser'){
 
         if ($resultAdd){
             $_SESSION['messages'][] = ' Votre compte a été créé avec succès, veuillez vous connecter!';
-            header('Location:index.php?controller=login&action=login');
+            header('Location:index.php?page=login&action=login');
             exit;
         }else{
             $_SESSION['messages'][] = 'Erreur lors de l\'inscription, veuillez réessayer ultérieurement. :(';
-            header('Location:index.php?controller=register&action=register');
+            header('Location:index.php?page=register&action=register');
             exit;
         }
     }
