@@ -1,8 +1,5 @@
 /*Inscription*/
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        max-width: 100%;
-    }
+
     * {
         box-sizing: border-box;
     }
@@ -51,6 +48,26 @@ float: left;
         width: 100%;
         opacity: 0.9;
     }
+
+
+
+        .addcard{
+                background-color: black;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 40%;
+                opacity: 0.9;
+        }
+
+        .quanty{
+            padding: 16px 20px;
+            margin: 8px 0;
+            width: 40%;
+        }
+
 
     .registerbtn:hover {
         opacity: 1;
@@ -112,7 +129,6 @@ float: left;
     .footer {
          text-align: center;
          font-size: 13px;
-         padding: 50px;
          background-color:whitesmoke;
     }
 
@@ -123,8 +139,6 @@ float: left;
 
 }
 
-    * {box-sizing: border-box}
-    body {font-family: Verdana, sans-serif; margin:0}
 
 
     /* Slideshow container */
@@ -269,6 +283,7 @@ float: left;
     body {
         max-width: 100%;
         font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
+        margin:0;
     }
 
     html {
@@ -315,6 +330,7 @@ float: left;
 
     .logo{
         margin-top: 10px;
+
     }
 
     a {

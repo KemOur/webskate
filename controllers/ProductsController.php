@@ -2,14 +2,7 @@
 require_once 'models/Products.php';
 require_once 'models/ShowCategoryModel.php';
 
-//$products = getAllProducts();
-//require('views/Allproducts.php');
-
-
-//mécanique du controller (vérifications)
-//postulat de base : aucune catégorie n'a été séléctionnée
 $selectedCategory = false;
-
 $categorys = getCategorys();
 
 //si ID de catégorie demandé
@@ -31,11 +24,9 @@ if(isset($_GET['category_id'])){
         exit;
     }
     //si ce test est passé, alors $selectedCategory est une catégorie existante
-
     $products = getProductsByCategoryId($_GET['category_id']);
 }
 else{
     $products = getAllProducts();
 }
-
 require('views/Allproducts.php');

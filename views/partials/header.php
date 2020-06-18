@@ -25,12 +25,14 @@
             <div class="icone">
                     <div>
                         <?php if(!isset($_SESSION['user'])): ?><a href="http://localhost/webskate/index.php?page=register&action=register"> <img src="assets/images/accueil/user_.png" width="30px" height="31px"> </img></a><?php endif; ?>
+                        <?php if(isset($_SESSION['user'])): ?><a href="http://localhost/webskate/index.php?page=user&action=Eprofil"> <img src="assets/images/accueil/user_.png" width="30px" height="31px"> </img></a><?php endif; ?>
+
                         <img src="assets/images/accueil/ecom.svg" width="30px" height="30px"></img>
 
                         <?php if(isset($_SESSION['user'])): ?><a href="index.php?action=logout" ><img src="assets/images/accueil/deco.png" width="30px" height="30px"></img><?php endif; ?>
 
                             <a href="http://localhost/webskate/administrateur/index.php">
-                                <?php if (!isset($_SESSION['user']) == 0) :?>
+                                <?php if (isset($_SESSION['user']['is_admin']) == 1) :?>
                                     <img src="assets/images/accueil/admin.png" width="30px" height="30px"></img>
                                 <?php endif; ?>
                             </a>
@@ -41,7 +43,7 @@
 
 
     </nav>
-    <div class="promo"><p class="promo_p">En raison de la crise sanitaire, nos magasins se trouve fermé temporairement! jusqu'à nouvel ordre</p></div>
+    <div class="promo"><p class="promo_p">En raison de la crise sanitaire, nos magasins se trouve fermé temporairement! jusqu'à nouvel ordre.</p></div>
 
 
 
