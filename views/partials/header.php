@@ -27,7 +27,7 @@
                         <?php if(!isset($_SESSION['user'])): ?><a href="http://localhost/webskate/index.php?page=register&action=register"> <img src="assets/images/accueil/user_.png" width="30px" height="31px"> </img></a><?php endif; ?>
                         <?php if(isset($_SESSION['user'])): ?><a href="http://localhost/webskate/index.php?page=user&action=Eprofil"> <img src="assets/images/accueil/user_.png" width="30px" height="31px"> </img></a><?php endif; ?>
 
-                        <img src="assets/images/accueil/ecom.svg" width="30px" height="30px"></img>
+                       <a href="index.php?page=cart&action=cart"><span class="numberofarticle"><?=$num_items_in_cart?></span><img src="assets/images/accueil/ecom.svg" width="30px" height="30px"></img></a>
 
                         <?php if(isset($_SESSION['user'])): ?><a href="index.php?action=logout" ><img src="assets/images/accueil/deco.png" width="30px" height="30px"></img><?php endif; ?>
 
@@ -36,7 +36,6 @@
                                     <img src="assets/images/accueil/admin.png" width="30px" height="30px"></img>
                                 <?php endif; ?>
                             </a>
-
                     </div>
                 </div>
         </div>

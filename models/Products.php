@@ -31,3 +31,42 @@ function getProductsByCategoryId($categoryId)
     $products = $query->fetchAll();
     return $products;
 }
+
+
+
+function ifproductexist()
+{
+    $db = dbConnect();
+    $query = $db->prepare('SELECT * FROM products WHERE id = ?');
+    $query->execute([$_POST['product_id']]);
+    $product = $query->fetch(PDO::FETCH_ASSOC);
+
+    return $product;
+}
+
+
+
+
+function get_all_cart_products()
+{
+    $db = dbConnect();
+    $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+    $products = array();
+    $subtotal = 0.00;
+
+    if ($products_in_cart) {
+        $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?'));
+        $stmt = $db->prepare('SELECT * FROM products WHERE id IN (' . $array_to_question_marks . ')');
+        $stmt->execute(array_keys($products_in_cart));
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as $product) {
+            $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
+    }
+        return $products;
+
+    }
+}
+
+
+

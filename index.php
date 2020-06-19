@@ -3,7 +3,7 @@
 <?php
 
 session_start();
-var_dump($_SESSION);
+//var_dump($_SESSION);
 require ('helpers.php');
 
 if(isset($_GET['action'])){
@@ -15,6 +15,9 @@ if(isset($_GET['action'])){
         header("Location:index.php?page=products&action=all");
     }
 }
+
+$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+
 
 
 if(isset($_GET['page'])):
@@ -28,7 +31,12 @@ if(isset($_GET['page'])):
             require 'controllers/RegisterController.php';
             break;
 
-            case 'products' :
+        case 'order':
+        case 'cart' :
+            require 'controllers/CartController.php';
+            break;
+
+        case 'products' :
             require 'controllers/ProductsController.php';
             break;
 

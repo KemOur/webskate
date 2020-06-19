@@ -89,7 +89,7 @@ elseif($_GET['action'] == 'editProduct'){
             }
                 $_SESSION['old_inputs'] = $_POST;
                 header('Location:index.php?controller=products&action=editProduct&id='.$_GET['id']);
-exit;//exit ajouté aujour hui (14/06/20)
+exit;
         }
 
         else{

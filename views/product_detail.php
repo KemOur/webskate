@@ -19,7 +19,7 @@
                                     <h3><?= $selectedProduct['price']; ?> €</h3>
                                     <h5>En stock:  <?= $selectedProduct['quantity']; ?></h5>
 
-                                    <form action="" method="post"><!-- action="index.php?page=cart"-->
+                                    <form action="index.php?page=cart&action=addCart" method="post">
                                         <input type="number" class="quanty" name="quantity" value="1" min="1" max="<?=$selectedProduct['quantity']?>" placeholder="Quantity" required>
                                         <input type="hidden" name="product_id" value="<?=$selectedProduct['id']?>">
                                         <button type="submit" value="Add to card" class="addcard">AJOUTER AU PANNIER</button>
@@ -29,6 +29,7 @@
                                     <h4>DESCRIPTION DU PRODUIT</h4>
                                 <?= $selectedProduct['description']; ?>
                             </div>
+                            <!-- Afficher les images en relation avec ce produit!-->
                         </div>
                 </div>
             </div>
