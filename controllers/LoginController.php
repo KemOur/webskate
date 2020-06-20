@@ -28,8 +28,6 @@ elseif($_GET['action'] == 'coUser'){
         $resultAdd = coUser ($_POST['user']);
 
         if($resultAdd){
-            $_SESSION['messages'][] = ' Connecté !';
-
             header('Location:index.php');
             exit;;
         }else{

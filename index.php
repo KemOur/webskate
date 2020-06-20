@@ -8,8 +8,9 @@ require ('helpers.php');
 
 if(isset($_GET['action'])){
     if($_GET['action'] == 'logout'){
-        //session_destroy();
-        unset($_SESSION['user']);
+        session_destroy();
+        //unset($_SESSION['user']);
+        //unset($_SESSION['cart']);
         header("Location:index.php?page=products&action=all");
     }
 }
