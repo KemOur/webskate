@@ -8,10 +8,14 @@ if($_GET['action'] == 'cart'){
     $products=get_all_cart_products();
     $subtotal = 0.00;
 
-    $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
-    foreach ($products as $product) {
+    if (is_array($products) || is_object($products)){
+        $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+        foreach ($products as $product) {
         $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
+        //var_dump($products_in_cart);
     }
+    }
+
     require('views/usercart.php');
 
 }
@@ -46,8 +50,6 @@ elseif($_GET['action'] == 'addCart'){
                 exit;
                 }
             }
-
-
 
 
     if (isset($_POST['update']) && isset($_SESSION['cart'])) {

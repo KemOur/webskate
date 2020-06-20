@@ -10,7 +10,7 @@
 <?php endif; ?>
 
 
-<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=categorys&action=new">Ajouter Catégorie</a><br>
+<a class="btn btn-outline-success" href="index.php?controller=categorys&action=new">Ajouter Catégorie</a><br>
 <br>
 <h4>Liste des Catégories:</h4>
 <table class="table">

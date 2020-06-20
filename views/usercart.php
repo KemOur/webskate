@@ -12,7 +12,7 @@
     }
 
     .under{
-        text-underline-color: red;
+        text-decoration: underline red;
     }
 
         .table{
@@ -41,14 +41,15 @@
         <table class="table">
             <thead>
             <tr>
-                <td colspan="2"></td>
+                <td colspan="2">PRODUCTS</td>
                 <td>PRIX</td>
                 <td>QUANTITE</td>
                 <td>TOTAL</td>
             </tr>
             </thead>
-            <tbody><br>
+            <tbody>
             <?php if (empty($products)): ?>
+
                 <tr><td colspan="5" class="under">Vous n'avez pas de produit dans le pannier!</td></tr>
 
             <?php else: ?>
@@ -63,7 +64,7 @@
                                     <a href="index.php?page=product&product_id=<?=$product['id']?>"><h5><?=$product['name']?></h5></a>
 
                                     <a href="index.php?page=cart&remove=<?=$product['id']?>" class="remove"> <img src="assets/images/autres/p.png"  alt="delete" height="30px" width="40px">
-                                    </a><!--mettre une image a la place, png de publle pour la supprission-->
+                                    </a>
                                 </td>
                                 <td class="price"><?=$product['price']?>€</td>
                                 <td class="quantity">

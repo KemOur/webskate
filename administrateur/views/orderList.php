@@ -21,7 +21,7 @@
 
     <tr>
     </tbody>
-    <?php endforeach; ?>
+    <?php endforeach;?>
 </table>
 
 <?php require ('partials/footer.php'); ?>

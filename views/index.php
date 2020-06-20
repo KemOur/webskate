@@ -1,7 +1,6 @@
 <?php require ('partials/header.php'); ?>
 
 <div class="slideshow-container">
-
     <div class="mySlides"><img class="img" src="assets/images/accueil/couple_.jpg"></div>
     <div class="mySlides"><img class="img" src="assets/images/accueil/yes.jpg"></div>
     <div class="mySlides"><img class="img" src="assets/images/accueil/yo.jpg" ></div>
@@ -45,9 +44,7 @@
 <hr class="pra">
 
 <img class="allb" src="assets/images/category/15.jpg" width="78%" height="75%">
-<a href="http://localhost/webskate/index.php?page=products&category_id=15">
-    <button type="submit" class="btnacheter">ACHETER</button>
-</a>
+<a href="http://localhost/webskate/index.php?page=products&category_id=15"><button type="submit" class="btnacheter">ACHETER</button></a>
 
 
 <?php require ('partials/footer.php'); ?>

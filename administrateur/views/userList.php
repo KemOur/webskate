@@ -10,7 +10,7 @@
 <?php endif; ?>
 
 <div>
-<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=users&action=new">Ajouter un utilisateur</a>
+<a class="btn btn-outline-success" href="index.php?controller=users&action=new">Ajouter un utilisateur</a>
 </div>
 <br>
 <h4>Liste des utilisateurs:</h4>

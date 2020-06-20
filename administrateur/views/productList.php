@@ -12,7 +12,7 @@
 
 
 
-<a class="btn btn-outline-success" href="http://localhost/webskate/administrateur/index.php?controller=products&action=new">Ajouter un produit</a>
+<a class="btn btn-outline-success" href="index.php?controller=products&action=new">Ajouter un produit</a>
 <br>
 <br>
 <h4>Liste des produits:</h4>
