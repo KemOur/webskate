@@ -16,7 +16,6 @@
     <tr>
 
         <th><a href=""><?=  htmlspecialchars($order['client_name']) ?></a></th>
-                <!-- prénom link que devra me redigerer vers la page détail commande! || PAS ENCORE FAIT!!!!-->
                 <td><?=  htmlspecialchars($order['delivery_adress'])?></td>
 
     <tr>

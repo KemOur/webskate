@@ -7,7 +7,7 @@
 .imgdetail{
 float: left;
 }
-    /* Add padding to containers */
+    /* Ajouter un produit */
     .container {
         padding: 20px;
         margin-left: 200px;
@@ -15,7 +15,7 @@ float: left;
         background-color: white;
         max-width: 1920px;
     }
-    /* Full-width input fields */
+    /* width input */
     input[type=text], input[type=password] {
         width: 100%;
         padding: 15px;
@@ -30,14 +30,12 @@ float: left;
         outline: none;
     }
 
-    /* Overwrite default styles of hr */
     hr {
         border: 2px solid #f1f1f1;
 
         margin-bottom: 25px;
     }
 
-    /* Set a style for the submit button */
     .registerbtn {
         background-color: black;
         color: white;
@@ -48,8 +46,6 @@ float: left;
         width: 100%;
         opacity: 0.9;
     }
-
-
 
         .addcard{
              background-color: black;
@@ -74,19 +70,18 @@ float: left;
              width: 70%;
         }
 
-    .registerbtn:hover {
-        opacity: 1;
-    }
-
-
-    .lieninscription{
-        color: dodgerblue;
-    }
-      a{
-         color: black;
+        .registerbtn:hover {
+            opacity: 1;
         }
 
-    /* Set a grey background color and center the text of the "sign in" section */
+
+        .lieninscription{
+            color: dodgerblue;
+        }
+          a{
+             color: black;
+            }
+
     .signin {
         background-color: #f1f1f1;
         text-align: center;
@@ -154,9 +149,7 @@ float: left;
 
 }
 
-
-
-    /* Slideshow container */
+    /* Slide */
     .slideshow-container {
         position: relative;
         background: #f1f1f1f1;
@@ -169,7 +162,6 @@ float: left;
         text-align: center;
     }
 
-    /* Next & previous buttons */
     .prev, .next {
         cursor: pointer;
         position: absolute;
@@ -184,27 +176,23 @@ float: left;
         user-select: none;
     }
 
-    /* Position the "next button" to the right */
     .next {
         position: absolute;
         right: 0;
         border-radius: 3px 0 0 3px;
     }
 
-    /* On hover, add a black background color with a little bit see-through */
     .prev:hover, .next:hover {
         background-color: rgba(0,0,0,0.8);
         color: white;
     }
 
-    /* The dot/bullet/indicator container */
     .dot-container {
         text-align: center;
         padding: 20px;
         background: #ddd;
     }
 
-    /* The dots/bullets/indicators */
     .dot {
         cursor: pointer;
         height: 15px;
@@ -216,15 +204,12 @@ float: left;
         transition: background-color 0.6s ease;
     }
 
-    /* Add a background color to the active dot/circle */
     .active, .dot:hover {
         background-color: #717171;
     }
 
-    /* Add an italic font style to all quotes */
     q {font-style: italic;}
 
-    /* Add a blue color to the author */
     .author {color: cornflowerblue;}
 
 
@@ -267,7 +252,6 @@ float: left;
         }
 
 
-        /* Float four columns side by side */
         .column {
           float: left;
           width: 25%;
@@ -275,17 +259,13 @@ float: left;
 
         }
 
-        /* Remove extra left and right margins, due to padding */
 
-
-        /* Clear floats after the columns */
         .row:after {
           content: "";
           display: table;
           clear: both;
         }
 
-        /* Responsive columns */
         @media screen and (max-width: 600px) {
           .column {
             width: 100%;
@@ -294,16 +274,42 @@ float: left;
           }
         }
 
-    /*css officiel*/
-    body {
-        max-width: 100%;
-        font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
-        margin:0;
-    }
-
     html {
         font-family: "Lucida Sans", sans-serif;
     }
+
+    .cartbtn {
+        background-color: black;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 21%;
+        opacity: 0.9;
+    }
+
+    .under{
+        text-decoration: underline red;
+    }
+
+        .table{
+            text-align: center;
+            width: 100%;
+            margin-right: 20%;
+            margin-left: -4%;
+        }
+        .subtotal{
+            text-align: end;
+            margin-right: 9%;
+        }
+
+        .pannier{
+            text-align: center;
+        }
+        .buttons{
+            text-align: center;
+        }
 
 
 

@@ -5,10 +5,8 @@
 </head>
 <body>
 <div class="container-fluid">
-    <!-- inclusion du fichier header.php (header du site) -->
     <?php require 'partials/header.php'; ?>
     <div class="row my-3">
-        <!-- inclusion du fichier nav.php (navigation du site) -->
         <main class="col-9">
             <div class="products_position">
                 <div class="row">
@@ -23,13 +21,11 @@
                                         <input type="number" class="quanty" name="quantity" value="1" min="1" max="<?=$selectedProduct['quantity']?>" placeholder="Quantity" required>
                                         <input type="hidden" name="product_id" value="<?=$selectedProduct['id']?>">
                                         <button type="submit" value="Add to card" class="addcard">AJOUTER AU PANNIER</button>
-                                        <!--<input type="submit" value="Add To Cart">-->
                                     </form>
 
                                     <h4>DESCRIPTION DU PRODUIT</h4>
                                 <?= $selectedProduct['description']; ?>
                             </div>
-                            <!-- Afficher les images en relation avec ce produit!-->
                         </div>
                 </div>
             </div>

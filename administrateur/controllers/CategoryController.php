@@ -9,7 +9,6 @@ if ($_GET['action'] == 'list') {
     $categorys = getAllCategorys();
     require('views/categoryList.php');
 }
-//My function to add a new category
 elseif($_GET['action'] == 'new'){
     $categorys=getAllCategorys();
     require('views/categoryForm.php');
@@ -37,7 +36,7 @@ elseif($_GET['action'] == 'addCategory'){
     }
 }
 
-//function delete
+
 elseif($_GET['action'] == 'delCategory'){
     $result = delCategory(   $_GET['id']    );
     if($result){
@@ -50,10 +49,7 @@ elseif($_GET['action'] == 'delCategory'){
     exit;
 }
 
-//function edition
 elseif($_GET['action'] == 'editCategory'){
-
-    //si le formulaire est soumis
     if(!empty($_POST)){
         if(empty($_POST['name']) || empty($_POST['description'])){
 

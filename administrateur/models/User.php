@@ -6,7 +6,6 @@ function getAllUsers()
 
     $query = $db->query('SELECT * FROM users ORDER BY ID DESC');
     $users = $query->fetchAll();
-
     return $users;
 }
 
@@ -38,10 +37,6 @@ function delUser($id)
 
     return $result;
 }
-
-
-
-
 
 function getUser($id)
 {

@@ -10,10 +10,6 @@ function getAllProducts()
     return $products;
 }
 
-
-
-
-
 function addProduct($informations)
 {
     $db = dbConnect();
@@ -44,19 +40,9 @@ function addProduct($informations)
     return $result;
 }
 
-
-
-
-
-
-
-
 function delProduct($id)
 {
     $db = dbConnect();
-
-    //ne pas oublier de supprimer le fichier lié s'il y en un
-    //avec la fonction unlink de PHP
     deleteproductimage($id);
     $query = $db->prepare('DELETE FROM products WHERE id = ?');
     $result = $query->execute([$id]);
@@ -79,10 +65,6 @@ function deleteproductimage($id)
 }
 
 
-
-
-
-
 function getProduct($id)
 {
     $db = dbConnect();
@@ -98,10 +80,6 @@ function getProduct($id)
 }
 
 
-
-
-
-
 function getImageP($id)
 {
     $db = dbConnect();
@@ -115,11 +93,6 @@ function getImageP($id)
 
     return $result;
 }
-
-
-
-
-
 
 
 function editProduct($id, $informations)

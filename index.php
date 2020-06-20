@@ -8,17 +8,12 @@ require ('helpers.php');
 
 if(isset($_GET['action'])){
     if($_GET['action'] == 'logout'){
-        //destroy the session
-        session_destroy();
-        //unset($_SESSION['user']);
-        //redirect the user to a default web page using header
+        //session_destroy();
+        unset($_SESSION['user']);
         header("Location:index.php?page=products&action=all");
     }
 }
-
 $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-
-
 
 if(isset($_GET['page'])):
     switch ($_GET['page']):

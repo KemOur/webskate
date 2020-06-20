@@ -1,43 +1,9 @@
 <?php require ('partials/header.php'); ?>
-<style>
-    .cartbtn {
-        background-color: black;
-        color: white;
-        padding: 16px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 21%;
-        opacity: 0.9;
-    }
 
-    .under{
-        text-decoration: underline red;
-    }
-
-        .table{
-            text-align: center;
-            width: 100%;
-            margin-right: 20%;
-            margin-left: -4%;
-        }
-        .subtotal{
-            text-align: end;
-            margin-right: 9%;
-        }
-
-        .pannier{
-            text-align: center;
-        }
-        .buttons{
-            text-align: center;
-        }
-
-</style>
 <div class="cart content-wrapper">
     <h1 class="pannier">Panier</h1>
     <hr class="hrf">
-    <form action="index.php?page=cart&update=" method="post"><!-- action à revoir!-->
+    <form action="index.php?page=cart&update=" method="post">
         <table class="table">
             <thead>
             <tr>
@@ -85,8 +51,8 @@
         <br>
 <br>
         <div class="buttons">
-            <input type="submit" value="MODIFIER" class="cartbtn" name="update"><!-- update-->
-            <input type="submit" value="COMMANDER" class="cartbtn" name="place order"><!-- place order-->
+            <input type="submit" value="MODIFIER" class="cartbtn" name="update">
+            <input type="submit" value="COMMANDER" class="cartbtn" name="place order">
         </div>
     </form>
 </div>

@@ -4,12 +4,10 @@ require('models/Category.php');
 require('models/Image.php');
 
 
-
 if($_GET['action'] == 'list'){
     $products = getAllProducts();
     require('views/productList.php');
 }
-
 
 
 elseif($_GET['action'] == 'new'){
@@ -59,19 +57,10 @@ elseif($_GET['action'] == 'addProduct'){
 }
 
 
-
-
-
-
-
 elseif($_GET['action'] == 'editProduct'){
-    //si le formulaire est soumis
     if(!empty($_POST)){
         if(empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['quantity']) || empty($_POST['category_id'])){
-        //verif champs obligaroires
 
-            //exit ajouté aujour hui (14/06/20)
-            //$result = editProduct($_GET['id'], $_POST);
             if(empty($_POST['name'])){
                 $_SESSION['messages'][] = 'Le nom est obligatoire !';
             }
@@ -116,10 +105,6 @@ exit;
             require('views/productForm.php');
     }
 }
-
-
-
-
 
         elseif($_GET['action'] == 'delProduct'){
             $result = delProduct(   $_GET['id']    );

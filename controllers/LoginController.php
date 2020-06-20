@@ -3,7 +3,6 @@ require('models/Login.php');
 require_once 'models/ShowCategoryModel.php';
 
 
-//My function to add a new User
 if($_GET['action'] == 'login'){
     $categorys = getCategorys();
     require('views/login.php');
@@ -22,7 +21,6 @@ elseif($_GET['action'] == 'coUser'){
         }
 
         $_SESSION['old_inputs'] = $_POST;
-       // $_SESSION['user'] = $_POST;  /* Méthode a tester !!!*/
         header('Location:index.php?controller=home&action=home');
         exit;
     }

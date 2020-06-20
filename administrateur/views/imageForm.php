@@ -17,7 +17,6 @@
         <input  type="text" name="name" id="name"value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($image) ? $image['name'] : '' ?>" />
             <br>
             <br>
-        <!-- RENDRE LES CHAMPS IMAGES ET PUBLIE OBLIGATOIRE! -->
         <label for="image">Image :</label>
         <input type="file" name="image" id="image" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['image'] : '' ?>
             <?= isset($product) ? $product['image'] : '' ?>" />
@@ -41,13 +40,5 @@
         <br>
         <input type="submit" value="Enregistrer" />
     </form>
-
-<!--
-
-0-legend
-1-image file
-2-product_id
-3-published
--->
 
 <?php require ('partials/footer.php'); ?>

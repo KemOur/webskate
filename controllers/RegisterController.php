@@ -2,12 +2,10 @@
 require('models/Register.php');
 require_once 'models/ShowCategoryModel.php';
 
-//My function to add a new User
 if($_GET['action'] == 'register'){
     $users = getAllUsers();
     $categorys = getCategorys();
     require('views/registerForm.php');
-
 }
 
 elseif($_GET['action'] == 'addUser'){

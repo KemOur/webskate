@@ -3,16 +3,10 @@
 function getAllImages()
 {
     $db = dbConnect();
-
     $query = $db->query('SELECT * FROM images ORDER BY ID DESC');
     $images = $query->fetchAll();
-
     return $images;
 }
-
-
-
-
 
 
 function addImage($informations)
@@ -43,20 +37,13 @@ function addImage($informations)
 }
 
 
-
-
-
-
 function del_Product_Image($id)
 {
     $db = dbConnect();
 
-    //ne pas oublier de supprimer le fichier lié s'il y en un
-    //avec la fonction unlink de PHP
     delImg($id);
     $query = $db->prepare('DELETE FROM images WHERE id = ?');
     $result = $query->execute([$id]);
-
     return $result;
 }
 function delImg($id)
@@ -72,12 +59,6 @@ function delImg($id)
         unlink('../assets/images/img/' . $id . '.' . $my_file_extension);
     }
 }
-
-
-
-
-
-
 
 function get_products_images($id)
 {

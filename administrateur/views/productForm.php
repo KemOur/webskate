@@ -13,11 +13,6 @@
 
 
 
-
-
-
-
-
 <form action="index.php?controller=products&action=<?= isset($product) ||
 (isset($_SESSION['old_inputs']) && $_GET['action'] == 'editProduct') ? 'editProduct&id='.$_GET['id']  : 'addProduct' ?>" method="post" enctype="multipart/form-data">
     <div class="input-group">
@@ -103,8 +98,6 @@
         </div>
         <br>
 
-        <!-- RENDRE LES CHAMPS IMAGES ET PUBLIE OBLIGATOIRE! -->
-
         <div class="input-group">
             <div class="input-group-prepend"><span class="input-group-text">Image</span></div>
             <input type="file" name="image" id="image" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['image'] : '' ?>
@@ -157,13 +150,6 @@
         </div>
     <?php endforeach; ?>
 <?php endif ;?>
-
-
-
-
-
-
-
 
 
 

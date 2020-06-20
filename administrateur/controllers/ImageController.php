@@ -8,8 +8,6 @@ if ($_GET['action'] == 'list') {
     $images = getAllImages();
     require('views/imageList.php');
 }
-
-    //My function to add a new category
     elseif($_GET['action'] == 'new'){
         $products = getAllProducts();
         require('views/imageForm.php');
@@ -35,7 +33,6 @@ if ($_GET['action'] == 'list') {
         }
     }
 
-//function delete
 elseif($_GET['action'] == 'del_Product_Image'){
     $result = del_Product_Image (   $_GET['id']    );
     if($result){
@@ -48,8 +45,6 @@ elseif($_GET['action'] == 'del_Product_Image'){
     exit;
 }
 
-
-//function edition
 elseif($_GET['action'] == 'edit_Product_Image'){
 
     //si le formulaire est soumis

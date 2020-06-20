@@ -9,7 +9,6 @@ if ($_GET['action'] == 'list') {
     $users = getAllUsers();
     require('views/userList.php');
 }
-//My function to add a new User
 elseif($_GET['action'] == 'new'){
     $users=getAllUsers();
     require('views/userForm.php');
@@ -61,11 +60,8 @@ elseif($_GET['action'] == 'delUser'){
 }
 
 
-
-//function edition
 elseif($_GET['action'] == 'editUser'){
 
-    //si le formulaire est soumis
     if(!empty($_POST)){
         if(empty($_POST['nom'])
             || empty($_POST['prenom'])
@@ -104,7 +100,6 @@ elseif($_GET['action'] == 'editUser'){
         exit;
     }
     }
-
     else{
         if (!isset($_SESSION['old_inputs'])){
             $user = getUser($_GET['id']);
