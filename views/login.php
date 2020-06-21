@@ -19,7 +19,7 @@
     </div>
 
     <div class="container signin">
-        <p>Vous avez pas un compte? <a class="lieninscription" href="http://localhost/webskate/index.php?page=register&action=register">Inscrivez-vous</a>.</p>
+        <p>Vous avez pas un compte? <a class="lieninscription" href="index.php?page=register&action=register">Inscrivez-vous</a>.</p>
     </div>
 </form>
 <br>

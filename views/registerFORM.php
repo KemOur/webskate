@@ -23,7 +23,7 @@
         <button type="submit" class="registerbtn">Inscription</button>
     </div>
     <div class="container signin">
-        <p>Vous avez déjà un compte? <a class="lieninscription" href="http://localhost/webskate/index.php?page=login&action=login">Connectez-vous</a>.</p>
+        <p>Vous avez déjà un compte? <a class="lieninscription" href="index.php?page=login&action=login">Connectez-vous</a>.</p>
     </div>
 </form>
 <br>
