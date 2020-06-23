@@ -1,10 +1,12 @@
 <?php
-require('models/Register.php');
-require_once 'models/ShowCategoryModel.php';
+require('models/UserFront.php');
+require_once 'models/CategoryFront.php';
+require_once 'models/Information.php';
 
 if($_GET['action'] == 'register'){
     $users = getAllUsers();
     $categorys = getCategorys();
+    $infos = getInformations();
     require('views/registerForm.php');
 }
 
@@ -33,7 +35,7 @@ elseif($_GET['action'] == 'addUser'){
 
         if ($resultAdd){
             $_SESSION['messages'][] = ' Votre compte a été créé avec succès, veuillez vous connecter!';
-            header('Location:index.php?page=login&action=login');
+            header('Location:index.php');
             exit;
         }else{
             $_SESSION['messages'][] = 'Erreur lors de l\'inscription, veuillez réessayer ultérieurement. :(';

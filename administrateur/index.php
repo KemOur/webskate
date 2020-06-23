@@ -23,6 +23,10 @@ if(isset($_GET['controller'])){
             require 'controllers/userController.php';
             break;
 
+            case 'infos' :
+            require 'controllers/infoController.php';
+            break;
+
             case 'images' :
             require 'controllers/imageController.php';
             break;

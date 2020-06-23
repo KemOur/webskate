@@ -2,7 +2,6 @@
 require('models/User.php');
 require('models/Product.php');
 require('models/Category.php');
-require('models/Image.php');
 
 
 if ($_GET['action'] == 'list') {

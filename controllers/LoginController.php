@@ -1,10 +1,12 @@
 <?php
-require('models/Login.php');
-require_once 'models/ShowCategoryModel.php';
+require('models/UserFront.php');
+require_once 'models/CategoryFront.php';
+require_once 'models/Information.php';
 
 
 if($_GET['action'] == 'login'){
     $categorys = getCategorys();
+    $infos = getInformations();
     require('views/login.php');
 
 }

@@ -3,19 +3,15 @@ require('models/Product.php');
 require('models/Category.php');
 require('models/Image.php');
 
-
 if($_GET['action'] == 'list'){
     $products = getAllProducts();
     require('views/productList.php');
 }
 
-
 elseif($_GET['action'] == 'new'){
     $categorys=getAllCategorys();
     require('views/productFORM.php');
 }
-
-
 
 elseif($_GET['action'] == 'addProduct'){
 
@@ -55,7 +51,6 @@ elseif($_GET['action'] == 'addProduct'){
         exit;
     }
 }
-
 
 elseif($_GET['action'] == 'editProduct'){
     if(!empty($_POST)){

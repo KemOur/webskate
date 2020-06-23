@@ -39,10 +39,12 @@
                     </div>
                 </div>
         </div>
-
-
     </nav>
-    <div class="promo"><p class="promo_p">En raison de la crise sanitaire, nos magasins se trouve fermé temporairement! jusqu'à nouvel ordre.</p></div>
+
+
+    <?php foreach($infos as $info): ?>
+            <div class="promo"><p class="promo_P"><?=  htmlspecialchars($info['news']) ?></p></div>
+    <?php endforeach; ?>
 
 
 

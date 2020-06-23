@@ -1,8 +1,12 @@
 <?php
 
-require_once 'models/ShowCategoryModel.php';
+require_once 'models/CategoryFront.php';
 require_once 'models/Products.php';
+require_once 'models/Information.php';
+
 $categorys = getCategorys();
+$infos = getInformations();
+
 
 $selectedProduct = false;
 

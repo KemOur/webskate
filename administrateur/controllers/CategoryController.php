@@ -36,7 +36,6 @@ elseif($_GET['action'] == 'addCategory'){
     }
 }
 
-
 elseif($_GET['action'] == 'delCategory'){
     $result = delCategory(   $_GET['id']    );
     if($result){

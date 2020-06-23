@@ -1,9 +1,12 @@
 <?php
 require_once 'models/Products.php';
-require_once 'models/ShowCategoryModel.php';
+require_once 'models/CategoryFront.php';
+require_once 'models/Information.php';
+
 
 $selectedCategory = false;
 $categorys = getCategorys();
+$infos = getInformations();
 
 if(isset($_GET['category_id'])){
     if(!ctype_digit($_GET['category_id'])) {

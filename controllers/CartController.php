@@ -1,9 +1,11 @@
 <?php
 require('models/Products.php');
-require('models/showCategoryModel.php');
+require('models/CategoryFront.php');
+require('models/Information.php');
 
 if($_GET['action'] == 'cart'){
     $categorys = getCategorys();
+    $infos = getInformations();
 
     $products=get_all_cart_products();
     $subtotal = 0.00;

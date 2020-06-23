@@ -4,44 +4,39 @@ require('models/Product.php');
 require('models/Category.php');
 require('models/Image.php');
 
-if ($_GET['action'] == 'list') {
-    $images = getAllImages();
-    require('views/imageList.php');
-}
-    elseif($_GET['action'] == 'new'){
+if ($_GET['action'] == 'new'){
         $products = getAllProducts();
         require('views/imageForm.php');
     }
-
     elseif($_GET['action'] == 'addImage'){
-
         if(empty($_POST['name'])){
 
             if(empty($_POST['name']) ){
                 $_SESSION['messages'][] = 'Votre Image n\'as pas pu être enregistré cars vous avez oublié le champs name !';
             }
             $_SESSION['old_inputs'] = $_POST;
-            header('Location:index.php?controller=images&action=list');
+            header('Location:index.php?controller=products&action=list');
             exit;
         }
         else{
             $resultAdd = addImage($_POST);
 
             $_SESSION['messages'][] = $resultAdd ? 'Votre nouvelle image à été ajouté avec succés !' : "Erreur lors de l'enregistreent de l'image... :(";
-            header('Location:index.php?controller=images&action=list');
+            header('Location:index.php?controller=products&action=list');
             exit;
         }
     }
 
 elseif($_GET['action'] == 'del_Product_Image'){
-    $result = del_Product_Image (   $_GET['id']    );
+    $result = del_Product_Image ($_GET['id']);
     if($result){
-        $_SESSION['messages'][] = 'Image supprimé !';
+        $_SESSION['messages'][] = 'Image supprimé  ';
+
     }
     else{
         $_SESSION['messages'][] = 'Erreur lors de la suppression... :(';
     }
-    header('Location:index.php?controller=images&action=list');
+    header('Location:index.php?controller=products&action=list');
     exit;
 }
 

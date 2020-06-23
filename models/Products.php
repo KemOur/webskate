@@ -1,38 +1,37 @@
 <?php
 function getAllProducts()
 {
-$db = dbConnect();
-$query = $db->query('SELECT * FROM  products ');
-$products = $query->fetchAll();
-return $products;
+    $db = dbConnect();
+    $query = $db->query('SELECT * FROM  products ');
+    $products = $query->fetchAll();
+    return $products;
 }
 
-function get4Last_Products()
+function getfourLastProducts()
 {
-$db = dbConnect();
-$query = $db->query('SELECT * FROM products ORDER BY id DESC LIMIT 4');
-$products = $query->fetchAll();
-return $products;
+    $db = dbConnect();
+    $query = $db->query('SELECT * FROM products ORDER BY id DESC LIMIT 4');
+    $products = $query->fetchAll();
+    return $products;
 }
 
 function getProduct($productId)
 {
     $db = dbConnect();
-    $query = $db->query('SELECT * FROM products WHERE id = ' . $productId);
+    $query = $db->prepare('SELECT * FROM products WHERE id = ' . $productId);
+    $query->execute();
     $selectedProduct = $query->fetch();
     return $selectedProduct;
 }
 
-
 function getProductsByCategoryId($categoryId)
 {
     $db = dbConnect();
-    $query = $db->query('SELECT * FROM products WHERE category_id = ' . $categoryId);
+    $query = $db->prepare('SELECT * FROM products WHERE category_id = ' . $categoryId);
+    $query->execute();
     $products = $query->fetchAll();
     return $products;
 }
-
-
 
 function ifproductexist()
 {
@@ -43,9 +42,6 @@ function ifproductexist()
 
     return $product;
 }
-
-
-
 
 function get_all_cart_products()
 {
