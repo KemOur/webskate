@@ -1,13 +1,12 @@
 /*Inscription*/
-
     * {
         box-sizing: border-box;
     }
 
 .imgdetail{
-float: left;
-}
-    /* Ajouter un produit */
+    float: left;
+    }
+        /* Ajouter un produit */
     .container {
         padding: 20px;
         margin-left: 200px;
@@ -75,9 +74,6 @@ float: left;
         }
 
 
-        .lieninscription{
-            color: dodgerblue;
-        }
           a{
              color: black;
             }
@@ -98,17 +94,23 @@ float: left;
       text-decoration: none;
     }
 
+    .CssBtnAcheter{
+
+    }
+
 .btnacheter{
-        margin-left: 40%;
-        margin-right: 40%;
-        margin-top: -10%;
-        background-color: black;
-        color: white;
-        padding: 16px 20px;
-        border: none;
-        cursor: pointer;
-        width: 17%;
-        opacity: 0.9;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: -18%;
+
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
 }
     .promo_p{
         color: #ffffff;
@@ -119,7 +121,7 @@ float: left;
     /* mettre le image de l'acueill en position*/
     .img{
         width: 100%;
-        height: 70%;
+        height: 72%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -127,9 +129,13 @@ float: left;
 
     .footer {
          text-align: center;
-         font-size: 13px;
+         /*font-size: 13px;*/
          background-color:whitesmoke;
     }
+
+        .lieninscription{
+            color: dodgerblue;
+        }
 
     .numberofarticle{
       color:red;
@@ -140,13 +146,6 @@ float: left;
       position:center;
     }
 
-.hrf{
-
-  border: 1px solid black;
-  width:60%;
-
-}
-
     /* Slide */
     .slideshow-container {
         position: relative;
@@ -156,7 +155,6 @@ float: left;
     /* Slides */
     .mySlides {
         display: none;
-        /*padding: 80px;*/
         text-align: center;
     }
 
@@ -167,7 +165,7 @@ float: left;
         width: auto;
         margin-top: -30px;
         padding: 16px;
-        color: #888;
+        color: white;
         font-weight: bold;
         font-size: 20px;
         border-radius: 0 3px 3px 0;
@@ -211,7 +209,7 @@ float: left;
     .author {color: cornflowerblue;}
 
 
-/*Produits récemment ajoutés*/
+    /*Produits récemment ajoutés*/
         .recent{
             text-align: center;
             margin-top: 5%;
@@ -232,8 +230,8 @@ float: left;
         .pra{
             background-color: black;
             width: 80%;
-            border: 2px solid #f1f1f1
-            margin-top: 4%;
+            border: 1px solid #f1f1f1
+            margin-top: 1%;
         }
 
         .img_c{
@@ -241,9 +239,11 @@ float: left;
             }
 
             .allb{
-             margin: 10%;
-             margin-top: 0%;
+               margin: 23px;
+               justify-content: center;
+               display: flex;
             }
+
 
         * {
           box-sizing: border-box;
@@ -254,9 +254,7 @@ float: left;
           float: left;
           width: 25%;
           padding: 0 10px;
-
         }
-
 
         .row:after {
           content: "";
@@ -264,13 +262,6 @@ float: left;
           clear: both;
         }
 
-        @media screen and (max-width: 600px) {
-          .column {
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
-          }
-        }
 
     html {
         font-family: "Lucida Sans", sans-serif;
@@ -332,7 +323,6 @@ float: left;
     }
 
 
-
     .icone {
         margin-top: 12px;
     }
@@ -359,7 +349,9 @@ float: left;
 
 
 
-    @media (max-width: 900px) { /*Max 1000px*/
+/*Responsive*/
+
+        @media screen and (max-width: 1200px){
         .logo img{
             width: 116px;
         }
@@ -376,29 +368,29 @@ float: left;
             display: none;
         }
 
-
-        @media screen and (max-width: 1200px){
-            .box{
-                width: 38%;
-            }
-
-            .logo img{
-                margin-left: -35px;
-            }
-            .icone {
-                margin-right: -35px;
-            }
+        @media screen and (max-width: 768px){
+        .logo img{
+            width: 116px;
+        }
+        .icone a{
+            width: 18px;
+        }
+        .icone a:last-child {
+            display: block;
+        }
+        .icone a:nth-child(3) {
+            display: none;
+        }
+        .menu {
+            display: none;
         }
 
-        @media screen and (max-width: 600px){
-            .box{
-                width: 90%;
-            }
-            .logo img{
-                margin-left: -50px;
-            }
+        @media screen and (max-width: 360px){
 
-            .icone {
-                margin-right: -40px;
-            }
+         img{
+           100%;
+           height:auto;
+         }
+         }
+
 

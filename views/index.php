@@ -1,9 +1,9 @@
 <?php require ('partials/header.php'); ?>
 
 <div class="slideshow-container">
-    <div class="mySlides"><img class="img" src="assets/images/accueil/couple_.jpg"></div>
     <div class="mySlides"><img class="img" src="assets/images/accueil/yes.jpg"></div>
     <div class="mySlides"><img class="img" src="assets/images/accueil/yo.jpg" ></div>
+    <div class="mySlides"><img class="img" src="assets/images/accueil/couple_.jpg"></div>
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
@@ -43,8 +43,13 @@
 <h2 class="recent">All Black</h2>
 <hr class="pra">
 
-<img class="allb" src="assets/images/category/15.jpg" width="78%" height="75%">
-<a href="http://localhost/webskate/index.php?page=products&category_id=15"><button type="submit" class="btnacheter">ACHETER</button></a>
+<div class="allb">
+        <img class="centerimg" src="assets/images/autres/casque.webp" width="30%" height="30%">
+        <img class="centerimg" src="assets/images/category/15.jpg" width="30%" height="30%">
+</div>
 
+<div class="CssBtnAcheter">
+<a href="index.php?page=products&category_id=15"><button type="submit" class="btnacheter">ACHETER</button></a>
+</div>
 
 <?php require ('partials/footer.php'); ?>

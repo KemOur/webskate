@@ -13,15 +13,15 @@
         </h5>
 
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="btn" href="index.php?controller=categorys&action=list">Catégories</font></font></a>
+            <a class="btn" href="index.php?controller=categorys&action=list">Catégories</a>
             <a class="btn" href="#">Images_Slider </font></font></a>
-            <a class="btn" href="index.php?controller=infos&action=info">Informations</font></font></a>
+            <a class="btn" href="index.php?controller=infos&action=info">Informations</a>
             <a class="btn" href="#">A propos</font></font></a>
             <a class="btn" href="#">Mentions Légales</font></font></a>
-            <a class="btn" href="index.php?controller=products&action=list">Produits </font></font></a>
-            <a class="btn" href="index.php?controller=users&action=list">Users</font></font></a>
-            <a class="btn" href="index.php?controller=orders&action=list">Commandes </font></font></a>
-            <a class="btn btn-outline-dark" href="../index.php">Website </font></font></a>
+            <a class="btn" href="index.php?controller=products&action=list">Produits</a>
+            <a class="btn" href="index.php?controller=users&action=list">Users</a>
+            <a class="btn" href="index.php?controller=orders&action=list">Commandes</a>
+            <a class="btn btn-outline-dark" href="../index.php">Website</a>
         </nav>
     </div>
     <div class="container">

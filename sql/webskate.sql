@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 20, 2020 at 10:42 PM
+-- Generation Time: Jun 26, 2020 at 08:07 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.9
 
@@ -58,6 +58,35 @@ CREATE TABLE `images` (
   `published` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `name`, `image`, `product_id`, `published`) VALUES
+(3, 'soco', '3.jpg', 27, 0),
+(5, 'new image', '5.jpg', 27, 0),
+(7, 'Jordan', '7.jpeg', 27, 1),
+(9, 'rose', '9.jpg', 24, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `infos`
+--
+
+CREATE TABLE `infos` (
+  `id` int(11) NOT NULL,
+  `sujet` varchar(150) NOT NULL,
+  `news` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `infos`
+--
+
+INSERT INTO `infos` (`id`, `sujet`, `news`) VALUES
+(5, 'Afficher', 'On ne peut comprendre la vie qu\'en regardant en arrière, on ne peut la vivre qu\'en regardant en avant.-Sören Kierkegaard');
+
 -- --------------------------------------------------------
 
 --
@@ -77,7 +106,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `client_name`, `delivery_adress`, `user_id`, `date`) VALUES
-(1, 'junior', '110 rue camille desmoulins 94140', 16, '2020-06-17 14:34:34');
+(1, 'Junior', 'exmple', 21, '2020-06-23 22:09:21');
 
 -- --------------------------------------------------------
 
@@ -183,23 +212,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `password`, `is_admin`) VALUES
-(15, 'KEMI', 'Seba', 'seba@gmail', 'aa998115f76fd4d15c8b569824c0c329', 1),
-(16, 'EYAA', 'Thomas pd', 'thomas@homo.com', '827ccb0eea8a706c4c34a16891f84e7b', 0),
 (20, 'Juu', 'Simple_User', 'ju@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0),
 (21, 'KEMOUR', 'Administrateur', 'nany@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1),
-(22, 'DUARTE', 'JUNIOR', 'email@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_order`
---
-
-CREATE TABLE `user_order` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+(24, 'DUARTE VICTOR', 'Sanca Junior', 'duartejusanca@gmail.com', 'b0b03f11dabbc2864053b3ac3d134349', 0);
 
 --
 -- Indexes for dumped tables
@@ -217,6 +232,12 @@ ALTER TABLE `categorys`
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `infos`
+--
+ALTER TABLE `infos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `orders`
@@ -264,12 +285,6 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `user_order`
---
-ALTER TABLE `user_order`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -283,7 +298,13 @@ ALTER TABLE `categorys`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `infos`
+--
+ALTER TABLE `infos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -325,13 +346,7 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `user_order`
---
-ALTER TABLE `user_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
